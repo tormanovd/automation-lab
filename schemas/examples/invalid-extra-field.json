@@ -1,0 +1,35 @@
+{
+  "company": {
+    "name": "Nova",
+    "website": null
+  },
+  "contact": {
+    "name": "Пётр",
+    "role": null,
+    "email": null,
+    "telegram": null
+  },
+  "current_state": null,
+  "service_interest": "Other",
+  "market": "PL",
+  "urgency": "later",
+  "budget_range": {
+    "text": null,
+    "currency": null,
+    "min": null,
+    "max": null,
+    "confidence": 20,
+    "evidence": null
+  },
+  "pain_points": null,
+  "ai_summary": "Есть запрос на первичную консультацию.",
+  "ai_confidence_overall": 52,
+  "ai_questions": [
+    "Какая услуга интересует в первую очередь?",
+    "Какие у вас сроки запуска?",
+    "Кто будет основным контактным лицом?"
+  ],
+  "needs_contact": true,
+  "language_detected": "ru",
+  "source": "gmail"
+}
