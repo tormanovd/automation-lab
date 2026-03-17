@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/intake.schema.json",
+  "title": "InboundLeadIntake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "company",
+    "contact",
+    "current_state",
+    "service_interest",
+    "market",
+    "urgency",
+    "budget_range",
+    "pain_points",
+    "ai_summary",
+    "ai_confidence_overall",
+    "ai_questions",
+    "needs_contact",
+    "language_detected"
+  ],
+  "properties": {
+    "company": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "website": { "type": ["string", "null"] }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "role": { "type": ["string", "null"] },
+        "email": { "type": ["string", "null"] },
+        "telegram": { "type": ["string", "null"] }
+      }
+    },
+    "current_state": { "type": ["string", "null"] },
+    "service_interest": {
+      "type": ["string", "null"],
+      "enum": ["Performance", "Analytics", "Mixed", "Other", null]
+    },
+    "market": {
+      "type": ["string", "null"],
+      "enum": ["PL", "DACH", "EU", "US", "Other", null]
+    },
+    "urgency": {
+      "type": ["string", "null"],
+      "enum": ["this week", "2–4 weeks", "later", null]
+    },
+    "budget_range": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "currency", "min", "max", "confidence", "evidence"],
+      "properties": {
+        "text": { "type": ["string", "null"] },
+        "currency": { "type": ["string", "null"] },
+        "min": { "type": ["number", "null"] },
+        "max": { "type": ["number", "null"] },
+        "confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "evidence": { "type": ["string", "null"] }
+      }
+    },
+    "pain_points": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1,
+          "maxItems": 3
+        }
+      ]
+    },
+    "ai_summary": { "type": "string", "minLength": 1 },
+    "ai_confidence_overall": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "ai_questions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "needs_contact": { "type": "boolean" },
+    "language_detected": { "type": ["string", "null"] }
+  }
+}

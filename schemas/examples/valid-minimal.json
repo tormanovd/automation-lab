@@ -1,0 +1,34 @@
+{
+  "company": {
+    "name": "Acme",
+    "website": null
+  },
+  "contact": {
+    "name": null,
+    "role": null,
+    "email": null,
+    "telegram": null
+  },
+  "current_state": null,
+  "service_interest": null,
+  "market": null,
+  "urgency": null,
+  "budget_range": {
+    "text": null,
+    "currency": null,
+    "min": null,
+    "max": null,
+    "confidence": 0,
+    "evidence": null
+  },
+  "pain_points": null,
+  "ai_summary": "Клиент оставил минимальные вводные, требуется уточнение потребностей.",
+  "ai_confidence_overall": 35,
+  "ai_questions": [
+    "Какую услугу вы хотите в приоритете?",
+    "На каком рынке вы работаете?",
+    "Какой у вас целевой бюджет и сроки?"
+  ],
+  "needs_contact": true,
+  "language_detected": "ru"
+}
